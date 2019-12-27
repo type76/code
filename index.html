@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>code</title>
+</head>
+<style type="text/css">
+@font-face {
+  font-family: 'novecento';
+  src: url('font/novecento-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+margin: 50px;
+font-family: monospace; background: #000;
+color: #fff;}
+a {color: #aaa;}
+ul {list-style-type: none;}
+h1, h2, h3, h4, h5, p, li {max-width: 500px;}
+p {font-size: 1em; }
+img {border: #333 1px solid;}
+h1, h2, h3, h4, h5 {font-family: 'novecento';}
+blockquote {
+	border-top: #ccc 1px dotted; 
+	border-bottom: #ccc 1px dotted; 
+	padding: 12px 0;
+	margin: 0 0 0 1em;
+	max-width: 480px;
+}
+h1, h2, h3, h4 {margin-top: 2em; }
+</style>
+<body>
+<ul>
+	<li><a href="basic.html">basic</a></li>
+	<li><a href="https://type76.com/projects/codepad/three.html">edit</a></li>
+</ul>
+<h2>Three.js</h2>
+
+<p><a href="http://threejs.org/">Three.js</a> is a script that makes 3D in the browser. <br>The wikipedia <a href="https://en.m.wikipedia.org/wiki/Three.js">page</a> say this;</p>
+
+<blockquote>
+Three.js is a cross-browser JavaScript library and Application Programming Interface (API) used to create and display animated 3D computer graphics in a web browser. Three.js uses WebGL. The source code is hosted in a repository on GitHub.
+</blockquote>
+
+<p>It is one javascript file and runs on most phones, computers and TVs. Even if you don't know much (or any) javascript, once you know the rules you can start playing with it quite quickly.</p>
+
+<h2>As an alternative to using Unreal/Unity/Godot etc.</h2>
+
+<p>I find that most of the basic things in games engines (controls, visuals, audio, interactivity) can be achieved in the browser. Where flash, unity and unreal engine use a stage, mouse clicks and textboxes, we do it with a code edit/save and a browser refresh.</p> 
+
+<p>There are options for a Graphic User Interface, like the <a href="https://threejs.org/editor/">official editor</a> and a few engines that use three.js. You still must code to use three.js. Writing color:red is as easy as clicking around for it.</p>
+
+<h2>As a Flash replacement</h2>
+<p>I used to use Flash around 20 years ago. Like photoshop, it was a good tool to make things. Then the format was forced out and we now have canvas to replace it. Like it or love it, it does the same sort of things by default in the browser, without the need of updating a plugin. To do the same things as we used to do in flash takes coding. That is a barrier, but it shouldn't be hard to cross. It is essentially lights, camera, action on a stage.</p>
+
+
+<h2>Structure</h2>
+<p>Sometimes we can face browser security and server functionality issues, so I run my three.js projects with XAMP server on mac OS. This makes my laptop behave like a web server.</p>
+
+<p>I have a folder on my hard drive full of three.js project folders. Inside each folder is an index.html file and the three.js file.</p>
+
+<img src="img/folder.png">
+
+<p>I like to keep all js/css in one file. Sometimes I start with the <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">official three.js docs</a> basic example.</p>
+
+
+<h2>Assets</h2>
+<p>I like to use open source assets and modify them. <a href="https://opengameart.org/">Opengameart.org</a> is a good place for assets. Much respect to <a href="https://opengameart.org/users/grafxkid">grafxkid</a> for his amazing work that I love to use.</p>
+
+<img src="img/citypreview.png" title="by grafxkid">
+
+<p>All the code is available in the source or on github.</p>
+ 
+
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>code</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/prism_okaidia.css">
+<style type="text/css">
+@font-face {
+  font-family: 'novecento';
+  src: url('font/novecento-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+margin: 30px;
+font-family: monospace; background: #000;
+color: #fff;}
+pre {
+display: block;
+border-radius: 12px;
+margin: 30px 0 30px 0 !important;
+padding: 0;
+}
+a {color: #aaa;}
+p {font-size: 1em; max-width: 500px;}
+img {border: #333 1px solid;}
+h1, h2, h3, h4, h5 {font-family: 'novecento';}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {background: rgba(60,60,60,0.5);}
+
+.token.operator {background: transparent !important;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/prism-line-numbers.css"><body>
+<script src="js/prism.min.js"></script>
+<script src="js/prism-line-numbers.js"></script>
+ <body>
+<h2>The basic three.js template</h2>
+
+<p>Here's the base template from the <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">official three.js docs</a>, but with comments to explain each line of code.</p>
+
+<pre><code class="language-markup"><script type="prism-html-markup"><html>
+<head>
+	<title>Basic three.js template</title>
+	<style>
+		body { margin: 0; }
+		canvas { width: 100%; height: 100%; }
+	</style>
+</head>
+<body>
+<!-- import the three.js library -->
+<script src="js/three.js"></script>&lt;/script&gt;
+&lt;script&gt;
+	// make scene
+	var scene = new THREE.Scene();
+	// make camera in scene
+	var camera = new THREE.PerspectiveCamera( 
+	75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+	// render settings
+	var renderer = new THREE.WebGLRenderer();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	// put the canvas in the body
+	document.body.appendChild( renderer.domElement );
+	// camera position
+	camera.position.z = 5;
+
+	// create box geometry
+	var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+	// create box material
+	var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+	// create box object
+	var cube = new THREE.Mesh( geometry, material );
+	// put box object in scene
+	scene.add( cube );
+
+	// render loop
+	var animate = function () {
+		requestAnimationFrame( animate );
+
+		cube.rotation.x += 0.01;
+		cube.rotation.y += 0.01;
+
+		renderer.render( scene, camera );
+	};
+	// start rendering
+	animate();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</script></code>
+</pre>
+
+<p>Be sure to have the three.js file in the js folder.</p>
+
+<p>When rendered by a browser, the javascript makes a canvas tag inside the body tag (line 22). That canvas is an image that is rendered as fast as it can. 60 frames per second by default on most machines and phones. The resulting canvas should show a rotating green box like this.</p>
+
+
+<img src="img/box.png">
+
+
+<p>This is a basic example, but it shows how easy it is to get started. All the information is in the official <a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene">docs</a> and <a href="https://threejs.org/examples/#webgl_animation_cloth">examples</a>.</p>
+
+<p>You can edit and play with this code <a href="https://type76.com/projects/codepad/three.html">here</a>.</p>
+<!-- <pre data-src="js/prism-line-numbers.js"></pre> -->
+
+
+
+  </body>
+</html>
